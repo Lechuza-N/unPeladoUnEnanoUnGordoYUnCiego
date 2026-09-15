@@ -1,0 +1,13 @@
+import wollok.game.*
+import objetos.*
+
+
+program risidinivol
+{
+    game.width(16)
+    game.height(9)
+    game.cellSize(128)
+    game.title("Risidinivol")
+    game.start()
+    game.addVisualCharacter(objetos.personaje)
+}
