@@ -12,8 +12,8 @@ object personaje {
         direccion = nuevaDireccion
     }
 
-    method moverArriba() { posicion = posicion.up(velocidad) }
-    method moverAbajo() { posicion = posicion.down(velocidad) }
-    method moverIzquierda() { posicion = posicion.left(velocidad) }
-    method moverDerecha() { posicion = posicion.right(velocidad) }
+    method moverArriba() {if (posicion.y() < game.height() - 1) { posicion = posicion.up(velocidad) }}
+    method moverAbajo() {if (posicion.y() > 0) { posicion = posicion.down(velocidad) }}
+    method moverIzquierda() {if (posicion.x() > 0) { posicion = posicion.left(velocidad) }}
+    method moverDerecha() {if (posicion.x() < game.width() - 1) { posicion = posicion.right(velocidad) }}
 }
